@@ -6,7 +6,7 @@ const router = express.Router();
 // ============ CLASSROOMS ============
 
 // GET /api/resources/classrooms - Get all classrooms
-router.get('/classrooms', async (req, res) => {
+router.get('/clasrooms', async (req, res) => {
   try {
     const { isActive = true, type, building, page = 1, limit = 10 } = req.query;
     

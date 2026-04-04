@@ -4,14 +4,12 @@ const mongoose = require('mongoose');
 const classroomSchema = new mongoose.Schema({
   roomId: {
     type: String,
-    required: true,
-    unique: true,
+   
     trim: true
   },
   name: {
     type: String,
-    required: true,
-    trim: true
+   
   },
   capacity: {
     type: Number,
@@ -46,9 +44,7 @@ const classroomSchema = new mongoose.Schema({
 const laboratorySchema = new mongoose.Schema({
   labId: {
     type: String,
-    required: true,
-    unique: true,
-    trim: true
+    
   },
   name: {
     type: String,
