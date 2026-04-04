@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const connectDB = async () => {
+const conectDB = async () => {
   try {
     const conn = await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/acad_sched_pro', {
       useNewUrlParser: true,
@@ -10,7 +10,7 @@ const connectDB = async () => {
     console.log(`📊 MongoDB Connected: ${conn.connection.host}`);
     
     // Handle connection events
-    mongoose.connection.on('error', (err) => {
+    mongoose.conction.on('error', (err) => {
       console.error('MongoDB connection error:', err);
     });
 
@@ -19,7 +19,7 @@ const connectDB = async () => {
     });
 
     // Graceful shutdown
-    process.on('SIGINT', async () => {
+    process.on('SIGI NT', async () => {
       await mongoose.connection.close();
       console.log('MongoDB connection closed through app termination');
       process.exit(0);
