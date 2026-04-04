@@ -15,6 +15,7 @@ const semesterRoutes = require('./routes/semester');
 const resourceRoutes = require('./routes/resources');
 const timetableRoutes = require('./routes/timetable');
 
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 
